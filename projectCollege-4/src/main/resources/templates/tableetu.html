@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- partial:index.partial.html -->
+<div class="container"  sec:authorize="hasAuthority('ETU')">
+    <table>
+        <thead>
+        <tr>
+            <th>Nom de fichier</th>
+            <th>Type de fichier</th>
+            <th>Télécharger</th>
+
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="doc:${docs}">
+            <td th:text="${doc.name}"></td>
+            <td th:text="${doc.filetype}"></td>
+            <td><a th:href="@{'/downloadfile?id=' + ${doc.id}}">Télécharger</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- partial -->
+
+</body>
+</html>
