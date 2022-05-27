@@ -50,6 +50,7 @@
               th:field = "*{elementcourseNAME}"
               class = "form-control"
               placeholder="Enter Course Element Name"
+			  required="required"
                />
                </div>
  
@@ -78,17 +79,6 @@
     			<option th:each="i : ${#numbers.sequence(0, 100)}" th:value="${i}" th:text="${i}" 
      			 th:selected="${i==75}"></option>
 					</select>
-               </div>
-               
-                 <div class ="form-group">
-               <label> Course Element Comment </label>
-			<input
-              type = "text"
-              name = "name"
-              th:field = "*{elementcourseREQUIREMENTS}"
-              class = "form-control"
-              placeholder="Enter any comment on the element of the course"
-               />
                </div>
                
                 <div class = "form-group">

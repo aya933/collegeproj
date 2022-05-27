@@ -88,7 +88,6 @@ public class ElementCourseController {
 		//existingStudent.setStudentid(student.getStudentid());
 		existingElementCourse.setElementcourseid(elementcourse.getElementcourseid());
 		existingElementCourse.setElementcourseNAME(elementcourse.getElementcourseNAME());
-		existingElementCourse.setElementcourseREQUIREMENTS(elementcourse.getElementcourseREQUIREMENTS());
 		existingElementCourse.setElementcoursePERCENTAGE(elementcourse.getElementcoursePERCENTAGE());
 		existingElementCourse.setElementcourseSCORE(elementcourse.getElementcourseSCORE());
 		

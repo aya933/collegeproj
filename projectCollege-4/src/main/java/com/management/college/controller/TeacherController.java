@@ -6,10 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.management.college.entity.Course;
 import com.management.college.entity.Department;
@@ -84,7 +81,6 @@ public class TeacherController {
 		existingTeacher.setTeacherGENDER(teacher.getTeacherGENDER());
 		existingTeacher.setTeacherEMAIL(teacher.getTeacherEMAIL());
 		existingTeacher.setTeacherNUMBER(teacher.getTeacherNUMBER());
-		existingTeacher.setTeacherPASSWORD(teacher.getTeacherPASSWORD());
 		
 
 		// save updated teacher object
@@ -93,9 +89,16 @@ public class TeacherController {
 	}
 	
 	@GetMapping("/teachers/{teacherid}")
-	public String deleteTeacher(@PathVariable Long teacherid) {
-		teacherService.deleteTeacherById(teacherid);
-		return "redirect:/teachers";
+	@RequestMapping(path = {"/","/searchT"})
+	public String Teacher(Teacher teacher, Model model, String keyword) {
+		if(keyword!=null) {
+			List<Teacher> list = teacherService.getByKeyword(keyword);
+			model.addAttribute("list", list);
+		}else {
+			List<Teacher> list = teacherService.getAllTeachers();
+			model.addAttribute("list", list);}
+		return "teachers";
 	}
+
 
 }

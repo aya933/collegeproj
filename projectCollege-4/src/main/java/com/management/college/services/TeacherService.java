@@ -14,4 +14,8 @@ public interface TeacherService {
 
 	Teacher updateTeacher(Teacher teacher);
 
+	List<Teacher> getByKeyword(String keyword);
+
+
+
 }

@@ -2,14 +2,12 @@ package com.management.college.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.management.college.entity.Department;
 import com.management.college.services.DepartmentService;
 
+import java.util.List;
 
 
 @Controller
@@ -75,6 +73,16 @@ public class DepartmentController {
 	public String deleteDepartment(@PathVariable Long departmentid) {
 		departmentService.deleteDepartmentById(departmentid);
 		return "redirect:/departments";
+	}
+	@RequestMapping(path = {"/","/search"})
+	public String Department(Department department, Model model, String keyword) {
+		if(keyword!=null) {
+			List<Department> list = departmentService.getByKeyword(keyword);
+			model.addAttribute("list", list);
+		}else {
+			List<Department> list = departmentService.getAllDepartments();
+			model.addAttribute("list", list);}
+		return "departments";
 	}
 	
 }

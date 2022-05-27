@@ -52,17 +52,19 @@
               placeholder="Enter Course date (E, MMM dd yyyy)"
                />
                </div>
-               
-               <div class = "form-group">
-              <label> Course Semester </label>
-              <input
-              type = "text"
-              name = "semester"
-              th:field = "*{courseSEMESTER}"
-              class = "form-control"
-              placeholder="Enter Semester in which the course is taught"
-               />
-               </div>
+
+                        <div class = "form-group">
+                            <label> Course Semester </label>
+                            <input
+                                    type = "number"
+                                    max="10"
+                                    name = "semester"
+                                    th:field = "*{courseSEMESTER}"
+                                    class = "form-control"
+                                    placeholder="Enter Semester in which the course is taught"
+                                    required="required"
+                            />
+                        </div>
                
                <div class = "form-group">
               <label> Course Type </label>

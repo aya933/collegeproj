@@ -47,9 +47,7 @@ public class Student {
 
 	@Column (name="studentEMAIL", nullable = false)
 	private String studentEMAIL;
-	
-	@Column (name="studentPASSWORD", nullable = false)
-	private String studentPASSWORD;
+
 	
 	//JPA Hibernate brings specific info
 	//from different Tables to the current Table
@@ -78,7 +76,6 @@ public class Student {
 		this.studentNUMBER = studentNUMBER;
 		this.studentGENDER = studentGENDER;
 		this.studentEMAIL = studentEMAIL;
-		this.studentPASSWORD = studentPASSWORD;
 		this.major = major;
 	}
 
@@ -128,14 +125,6 @@ public class Student {
 
 	public void setStudentEMAIL(String studentEMAIL) {
 		this.studentEMAIL = studentEMAIL;
-	}
-
-	public String getStudentPASSWORD() {
-		return studentPASSWORD;
-	}
-
-	public void setStudentPASSWORD(String studentPASSWORD) {
-		this.studentPASSWORD = studentPASSWORD;
 	}
 
 	

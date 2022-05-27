@@ -3,7 +3,7 @@
     xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>College Student Management System</title>
+<title>College Student Information Management System</title>
 <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-expand-sm .bg-primary navbar-light">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Student Management System</a>
+  <a class="navbar-brand" href="#">College Student Information Management System</a>
 
   <!-- Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -38,7 +38,8 @@
               name = "Name"
               th:field = "*{courseNAME}"
               class = "form-control"
-              placeholder="Enter Student's Full Name"
+              placeholder="Enter Course Name"
+              required="required"
                />
                </div>
 
@@ -56,11 +57,13 @@
                <div class = "form-group">
               <label> Course Semester </label>
               <input
-              type = "text"
+              type = "number"
+              max="10"
               name = "semester"
               th:field = "*{courseSEMESTER}"
               class = "form-control"
               placeholder="Enter Semester in which the course is taught"
+              required="required"
                />
                </div>
 
@@ -72,6 +75,7 @@
               th:field = "*{courseTYPE}"
               class = "form-control"
               placeholder="Enter course type"
+              required="required"
                />
                </div>
 
@@ -83,6 +87,7 @@
               th:field = "*{Credit}"
               class = "form-control"
               placeholder="Enter number of course credits"
+              required="required"
                /> </div>
 
                <div class = "box-footer">

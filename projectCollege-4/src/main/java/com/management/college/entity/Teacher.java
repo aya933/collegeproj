@@ -36,9 +36,6 @@ public class Teacher {
 	@Column (name = "teacherEMAIL", nullable = false)
 	private String teacherEMAIL;
 	
-	@Column ( name = "teacherPASSWORD", nullable = false)
-	private String teacherPASSWORD;
-	
 	@ManyToOne
 	@JoinColumn(name = "coursetaught")
 	private Course courseid;
@@ -64,14 +61,14 @@ public class Teacher {
 	}
 
 	public Teacher(String teacherNAME, String teacherNUMBER, Date teacherBIRTH, String teacherGENDER,
-			String teacherEMAIL, String teacherPASSWORD, Course courseid, Department department) {
+			String teacherEMAIL, Course courseid, Department department) {
 		super();
 		this.teacherNAME = teacherNAME;
 		this.teacherNUMBER = teacherNUMBER;
 		this.teacherBIRTH = teacherBIRTH;
 		this.teacherGENDER = teacherGENDER;
 		this.teacherEMAIL = teacherEMAIL;
-		this.teacherPASSWORD = teacherPASSWORD;
+
 		this.courseid = courseid;
 		this.department = department;
 	}
@@ -127,14 +124,6 @@ public class Teacher {
 
 	public void setTeacherEMAIL(String teacherEMAIL) {
 		this.teacherEMAIL = teacherEMAIL;
-	}
-
-	public String getTeacherPASSWORD() {
-		return teacherPASSWORD;
-	}
-
-	public void setTeacherPASSWORD(String teacherPASSWORD) {
-		this.teacherPASSWORD = teacherPASSWORD;
 	}
 
 	public Course getCourseid() {

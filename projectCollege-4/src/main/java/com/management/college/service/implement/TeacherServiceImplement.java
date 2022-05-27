@@ -45,6 +45,10 @@ import com.management.college.services.TeacherService;
 		teacherRepository.deleteById(id);	
 	}
 
+	public List<Teacher> getByKeyword(String keyword){
+		return teacherRepository.findByKeyword(keyword);
+	}
+
 	
 
 }

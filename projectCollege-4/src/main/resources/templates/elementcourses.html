@@ -75,7 +75,6 @@
                  <th> Element Name</th>
                  <th> Teacher </th>
                  <th> Score Percentage </th>
-                 <th> Comment </th>
                  <th> Score </th>
                  <th> Actions </th>
              </tr>
@@ -88,7 +87,6 @@
 			    <td th:text = "${elementcourse.elementcourseNAME}"></td>
 			    <td th:text = "${elementcourse.teacher.teacherNAME}"></td>
 			    <td th:text = "${elementcourse.elementcoursePERCENTAGE}"></td>
-			    <td th:text = "${elementcourse.elementcourseREQUIREMENTS}"></td>
 			    <td th:text = "${elementcourse.elementcourseSCORE}"></td>
 			    <td>
 						<a th:href = "@{/elementcourses/edit/{elementcourseid}(elementcourseid=${elementcourse.elementcourseid})}"

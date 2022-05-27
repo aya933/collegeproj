@@ -16,4 +16,6 @@ public interface DepartmentService {
 
 	void deleteDepartmentById(Long id);
 
+	List<Department> getByKeyword(String keyword);
+
 }

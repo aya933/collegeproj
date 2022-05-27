@@ -20,8 +20,5 @@ public interface StudentService {
 	
 	Student getStudentById(Long id);
 
-	Page<Student> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection);
-	
-	 public List<Student> getByKeyword(String keyword);
-	Optional<Student> findOne(Long id);
+	List<Student> getByKeyword(String keyword);
 }

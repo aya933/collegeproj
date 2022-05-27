@@ -3,7 +3,7 @@
     xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>College Student Management System</title>
+<title>College Student Information Management System</title>
 <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -16,7 +16,7 @@
   
 <nav class="navbar navbar-expand-sm .bg-info navbar-light">
   <!-- Brand -->
-  <a class="navbar-brand" th:href="@{/index}">College Student Management System</a>
+  <a class="navbar-brand" th:href="@{/index}">College Student Information Management System</a>
   <!-- Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -30,29 +30,29 @@
         <a class="nav-link" th:href="@{add-user}" sec:authorize="hasAuthority('ADMIN')">Add Account</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" th:href="@{/table}">Download Cours</a>
+        <a class="nav-link" th:href="@{/table}">Download Course</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" th:href="@{/courses}">Course Management</a>
+        <a class="nav-link" th:href="@{/courses}">Course</a>
         </li>
       <li class="nav-item">
-        <a class="nav-link" th:href="@{/students}">Student Management</a>
+        <a class="nav-link" th:href="@{/students}">Student</a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" th:href="@{/results}">Score Management</a>
+        <a class="nav-link" th:href="@{/results}">Score</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" th:href="@{/teachers}">Teacher Management</a>
+        <a class="nav-link" th:href="@{/teachers}">Teacher</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" th:href="@{/elementcourses}">Course Element Information</a>
+        <a class="nav-link" th:href="@{/elementcourses}">Course Element</a>
        
       </li>
       <li class="nav-item">
-        <a class="nav-link" th:href="@{/departments}">List of Departments</a>
+        <a class="nav-link" th:href="@{/departments}">Departments</a>
        </li>
        <li class="nav-item">
-        <a class="nav-link" th:href="@{/majors}">List of Majors</a>
+        <a class="nav-link" th:href="@{/majors}">Majors</a>
        </li>
        <li class="nav-item">
         <a class="nav-link" th:href="@{upload-file}">Files</a>

@@ -50,6 +50,10 @@ public class DepartmentServiceImplement implements DepartmentService {
 		departmentRepository.deleteById(id);	
 		
 	}
+
+	public List<Department> getByKeyword(String keyword){
+		return departmentRepository.findByKeyword(keyword);
+	}
 	
 	
 
